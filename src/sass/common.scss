@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+// reset
+//@import "reset";
+
+@import "./parts/common";
+
+/*@import url(http://cdn.rawgit.com/hiun/NanumSquare/master/nanumsquare.css);
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url(http://static.go.co.kr/css/faq-v1.1.css);*/
+
+
+
+/*----------------------------------------------------------------------*/
+/*공통 서브비쥬얼*/
+.contents {
+	.cont-subVisual {
+		background: url(http://design.autopay.co.kr/joon/yeonhoresort/img/common/subVisual.jpg) no-repeat center;	
+
+	}
+}
+
+/*해더영역*/
+.header {
+	.cont-header {
+		padding-top: 32px;
+		.logo {
+			margin-top: -15px;
+			margin-left: -30px;
+            a {
+                display: block;
+            }
+		}
+		.gnb {
+			position: relative;
+			float: right;
+			.menu {
+				> li {
+					> a {
+						padding: 0 12px;
+					}
+					&:hover a, &.on a {
+						color: $fg-nav-hover;
+					}
+					&.li-evt > .btn-evt {
+						color: $fg-nav-evt;
+						border-color: $fg-nav-evt;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* rwing배너 */
+.rWing {
+    z-index: 2;
+    position: fixed;
+    margin-top: 70px;
+    right: 70px;
+    a {
+        position: relative;
+        display: block;
+        img {
+            
+        }
+    }
+}
