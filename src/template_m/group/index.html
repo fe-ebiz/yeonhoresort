@@ -1,0 +1,534 @@
+@@include('../include/_head.html', {
+	"page": "group"
+})
+
+	<!--페이지 전용 Css & Script-->
+	
+</head>
+<body class="Group">
+
+<div class="wrapper">
+	@@include('../include/_header.html')
+
+	<div class="contents">
+		<div class="cont-subVisual">
+			<h2 class="group">
+				<span class="row"><span class="dot-l"></span><strong>단체문의</strong></span>
+				<span class="row s-1">YEONHO RESORT &amp; CONDO</span>
+			</h2>
+		</div>
+		<!--//.cont-subVisual-->
+		
+		<div class="cf groupSec" id="groupSec">
+			<div class="sec intro-sec">
+				<h3 class="skip">단체행사 계획안내</h3>
+				<div class="split split-1">
+					<p class="p-1">
+						<strong>단체행사를 계획하고 계신가요?</strong>
+						<span class="row s-row">모든 것이 완벽한 연호리조트에서 <br>아름다운 추억을 만들어 드립니다.</span>
+					</p>
+				</div>
+				<div class="split split-2">
+					<figure class="d-map"><img src="http://design.autopay.co.kr/joon/yeonhoresort/img/group/map.jpg" alt="코레스코치악콘도 주변 지도"> </figure>
+					<p class="p-2">
+						연호리조트는 강원도 설악산 / 속초해수욕장과 약 5분거리,<br>
+						휴양과 편안한 부대시설은 물론 속초 8경 등의 다양한 관광지와<br>
+						5분 거리에 있는 등 산악회, 등산은 물론 일반 관광객을 위한<br>
+						최적의 접근성을 자랑합니다.
+					</p>
+					<hr class="division">
+					<p class="p-3">
+						연호리조트는 119객실의 대형리조트이며 <br>1,000명까지 동시 이용이 가능합니다.
+					</p>
+					<p class="row-btn"><a href="javascript:;" class="" onclick="faq_move();">단체 문의하기 <span class="ic-rArrow"></span></a></p>
+				</div>
+			</div>
+			<!--//.intro-sec-->
+
+			<div class="sec room-sec">
+				<h3 class="h3-tit">연호리조트 &amp; 콘도 객실 안내</h3>
+				<p class="p0">편안하고 아늑함을 마음 껏 즐길 수 있는 연호리조트만의 공간</p>
+				<ul class="ul-list clr" id="roomList">
+					<li class="li-item nth-1">
+						<figure><img src="http://design.autopay.co.kr/joon/yeonhoresort/img/gallery/room_a_1.jpg" alt="객실 이미지"></figure>
+						<div class="d-row-1 clr">
+							<div class="s-name">
+								스탠다드형 (온돌/침대)
+								<p class="d-row">25평형 / 기준인원 4명 / 최대인원 7명</p>
+							</div>
+							<a href="/gallery/?page=1" class="a-btn">자세히 보기 <span class="ic-rArrow"></span></a>
+						</div>
+					</li>
+					<li class="li-item nth-2">
+						<figure><img src="http://design.autopay.co.kr/joon/yeonhoresort/img/gallery/room_b_1.jpg" alt="객실 이미지"></figure>
+						<div class="d-row-1 clr">
+							<div class="s-name">
+								디럭스형 (온돌/침대)
+								<p class="d-row">25평형 / 기준인원 4명 / 최대인원 7명</p>
+							</div>
+							<a href="/gallery/?page=2" class="a-btn">자세히 보기 <span class="ic-rArrow"></span></a>
+						</div>
+					</li>
+					<li class="li-item nth-3">
+						<figure><img src="http://design.autopay.co.kr/joon/yeonhoresort/img/gallery/room_c_1.jpg" alt="객실 이미지"></figure>
+						<div class="d-row-1 clr">
+							<div class="s-name">
+								패밀리형 (온돌/침대)
+								<p class="d-row">50평형 / 기준인원 8명 / 최대인원 10명</p>
+							</div>
+							<a href="/gallery/?page=1" class="a-btn">자세히 보기 <span class="ic-rArrow"></span></a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!--//.room-sec-->
+
+			<div class="sec facil-sec base">
+				<h3 class="h3-tit">부대시설 안내</h3>
+				<p class="p0">한 자리에서 모든 것을 할 수 있는 연호리조트의 부대시설 안내</p>
+				<ul class="ul-list clr">
+					<li class="li-item nth-1" onclick="location.href='/facil/?page=1'" style="cursor:pointer">
+						<figure>
+							<img src="http://design.autopay.co.kr/joon/yeonhoresort/img/group/facil_1.jpg" alt="부대시설 이미지">
+							<figcaption>로비카페</figcaption>
+						</figure>
+					</li>
+					<li class="li-item nth-2" onclick="location.href='/facil/?page=2'" style="cursor:pointer">
+						<figure>
+							<img src="http://design.autopay.co.kr/joon/yeonhoresort/img/group/facil_2.jpg" alt="부대시설 이미지">
+							<figcaption>자판기</figcaption>
+						</figure>
+					</li>
+					<li class="li-item nth-3" onclick="location.href='/facil/?page=3'" style="cursor:pointer">
+						<figure>
+							<img src="http://design.autopay.co.kr/joon/yeonhoresort/img/group/facil_3.jpg" alt="부대시설 이미지">
+							<figcaption>프론트</figcaption>
+						</figure>
+					</li>
+					<li class="li-item nth-4" onclick="location.href='/facil/?page=4'" style="cursor:pointer">
+						<figure>
+							<img src="http://design.autopay.co.kr/joon/yeonhoresort/img/group/facil_4.jpg" alt="부대시설 이미지">
+							<figcaption>로비</figcaption>
+						</figure>
+					</li>
+				</ul>
+				<ul class="ul-list-2 clr">
+					<li class="li-item">
+						<figure>
+							<span class="s-bg"></span>
+							<img src="http://img.bscondo.co.kr/group/music_01.jpg" class="hidden-xs" alt="춤연습장, 보컬연습실이 필요한 단체숙소로 추천">
+							<img src="http://img.bscondo.co.kr/m/group/music_01.jpg" class="show-xs" alt="춤연습장, 보컬연습실이 필요한 단체숙소로 추천">
+							<figcaption>춤연습장, 보컬연습실이 필요한 단체숙소로 추천</figcaption>
+						</figure>
+						<p class="li-txt"><span>걸그룹 댄스연습실, 아이돌 대형연습실, 보이그룹 춤연습실, 뮤지컬 연습실, 댄스연습장, 대형연습장, 춤연습장, 합숙연습실, 합숙연습장, 합숙연습, 보컬연습실</span></p>
+					</li>
+					<li class="li-item">
+						<figure>
+							<span class="s-bg"></span>
+							<img src="http://img.bscondo.co.kr/group/music_02.jpg" class="hidden-xs" alt="합주연습실이 필요한 단체숙소로 추천">
+							<img src="http://img.bscondo.co.kr/m/group/music_02.jpg" class="show-xs" alt="합주연습실이 필요한 단체숙소로 추천">
+							<figcaption>합주연습실이 필요한 단체숙소로 추천</figcaption>
+						</figure>
+						<p class="li-txt"><span>관현악단 합주실, 오케스트라 합주연습실, 국악관현악단 합주연습장, 악단 합숙연습, 뮤지컬악단 합주장소, 교향악단 합주연습장소, 현악단 연습장소, 교회현악단 합숙연습실, 교회관현악단 합숙연습장, 전자현악단 단체숙박, 국악현악단 단체숙소</span></p>
+					</li>
+				</ul>
+				<div class="row-btn"><a href="" class="btn-inquiry">단체 문의하기 <span class="ic-rArrow rArrow"></span></a></div>
+			</div>
+			<!--//.facil-sec-->
+
+			<div class="sec facil-sec tour-sec">
+				<h3 class="h3-tit">주변 관광지 안내</h3>
+				<p class="p0">더욱 알찬 여행을 즐기는 방법! 주변 관광지를 소개합니다.</p>
+				<ul class="ul-list clr">
+					<li class="li-item nth-1">
+						<figure>
+							<img src="http://design.autopay.co.kr/joon/yeonhoresort/img/group/tour_1.jpg" alt="관광지 이미지">
+							<figcaption>
+								속초등대전망대
+								<span class="f-sm">차량 25분소요 <span>(5km 거리)</span>
+								</span>
+							</figcaption>
+						</figure>
+					</li>
+					<li class="li-item nth-2">
+						<figure>
+							<img src="http://design.autopay.co.kr/joon/yeonhoresort/img/group/tour_2.jpg" alt="관광지 이미지">
+							<figcaption>
+								범바위
+								<span class="f-sm">차량 20분 소요<span>(4km 거리)</span>
+								</span>
+							</figcaption>
+						</figure>
+					</li>
+					<li class="li-item nth-3">
+						<figure>
+							<img src="http://design.autopay.co.kr/joon/yeonhoresort/img/group/tour_3.jpg" alt="관광지 이미지">
+							<figcaption>
+								청대산
+								<span class="f-sm">차량 15분 소요<span>(2km 거리)</span>
+								</span>
+							</figcaption>
+						</figure>
+					</li>
+					<li class="li-item nth-4">
+						<figure>
+							<img src="http://design.autopay.co.kr/joon/yeonhoresort/img/group/tour_4.jpg" alt="관광지 이미지">
+							<figcaption>
+								청초호 호수공원
+								<span class="f-sm">차량 17분 소요<span>(3km 거리)</span>
+								</span>
+							</figcaption>
+						</figure>
+					</li>
+				</ul>
+				<ul class="ul-list clr">
+					<li class="li-item nth-1">
+						<figure>
+							<img src="http://design.autopay.co.kr/joon/yeonhoresort/img/group/tour_5.jpg" alt="관광지 이미지">
+							<figcaption>
+								조도
+								<span class="f-sm">차량 20분 소요<span>(4km 거리)</span>
+								</span>
+							</figcaption>
+						</figure>
+					</li>
+					<li class="li-item nth-2">
+						<figure>
+							<img src="http://design.autopay.co.kr/joon/yeonhoresort/img/group/tour_6.jpg" alt="관광지 이미지">
+							<figcaption>
+								대포 외옹치
+								<span class="f-sm">차량 30분 소요<span>(5km 거리)</span>
+								</span>
+							</figcaption>
+						</figure>
+					</li>
+					<li class="li-item nth-3">
+						<figure>
+							<img src="http://design.autopay.co.kr/joon/yeonhoresort/img/group/tour_7.jpg" alt="관광지 이미지">
+							<figcaption>
+								설악 해맞이공원
+								<span class="f-sm">차량 30분 소요 <span>(5km 거리)</span>
+								</span>
+							</figcaption>
+						</figure>
+					</li>
+					<li class="li-item nth-4">
+						<figure>
+							<img src="http://design.autopay.co.kr/joon/yeonhoresort/img/group/tour_8.jpg" alt="관광지 이미지">
+							<figcaption>
+								학무정
+								<span class="f-sm">차량 17분 소요 <span>(3km 거리)</span>
+								</span>
+							</figcaption>
+						</figure>
+					</li>
+				</ul>
+				<ul class="ul-list clr">
+					<li class="li-item nth-1">
+						<figure>
+							<img src="http://design.autopay.co.kr/joon/yeonhoresort/img/group/tour_9.jpg" alt="관광지 이미지">
+							<figcaption>
+								건봉사
+								<span class="f-sm">차량 1시간 소요<span>(29km 거리)</span>
+								</span>
+							</figcaption>
+						</figure>
+					</li>
+					<li class="li-item nth-2">
+						<figure>
+							<img src="http://design.autopay.co.kr/joon/yeonhoresort/img/group/tour_10.jpg" alt="관광지 이미지">
+							<figcaption>
+								천학정
+								<span class="f-sm">차량 25분 소요<span>(12km 거리)</span>
+								</span>
+							</figcaption>
+						</figure>
+					</li>
+					<li class="li-item nth-3">
+						<figure>
+							<img src="http://design.autopay.co.kr/joon/yeonhoresort/img/group/tour_11.jpg" alt="관광지 이미지">
+							<figcaption>
+								화진포
+								<span class="f-sm">차량 40분 소요<span>(40km 거리)</span>
+								</span>
+							</figcaption>
+						</figure>
+					</li>
+					<li class="li-item nth-4">
+						<figure>
+							<img src="http://design.autopay.co.kr/joon/yeonhoresort/img/group/tour_12.jpg" alt="관광지 이미지">
+							<figcaption>
+								청간정
+								<span class="f-sm">차량 23분 소요<span>(10km 거리)</span>
+								</span>
+							</figcaption>
+						</figure>
+					</li>
+				</ul>
+				<ul class="ul-list clr">
+					<li class="li-item nth-1">
+						<figure>
+							<img src="http://design.autopay.co.kr/joon/yeonhoresort/img/group/tour_13.jpg" alt="관광지 이미지">
+							<figcaption>
+								울산바위
+								<span class="f-sm">차량 30분 소요<span>(14km 거리)</span>
+								</span>
+							</figcaption>
+						</figure>
+					</li>
+					<li class="li-item nth-2">
+						<figure>
+							<img src="http://design.autopay.co.kr/joon/yeonhoresort/img/group/tour_14.jpg" alt="관광지 이미지">
+							<figcaption>
+								통일전망대
+								<span class="f-sm">차량 50분 소요<span>(40km 거리)</span>
+								</span>
+							</figcaption>
+						</figure>
+					</li>
+					<li class="li-item nth-3">
+						<figure>
+							<img src="http://design.autopay.co.kr/joon/yeonhoresort/img/group/tour_15.jpg" alt="관광지 이미지">
+							<figcaption>
+								송지호
+								<span class="f-sm">차량 35분 소요<span>(18km 거리)</span>
+								</span>
+							</figcaption>
+						</figure>
+					</li>
+					<li class="li-item nth-4">
+						<figure>
+							<img src="http://design.autopay.co.kr/joon/yeonhoresort/img/group/tour_16.jpg" alt="관광지 이미지">
+							<figcaption>
+								마산봉설경
+								<span class="f-sm">차량 1시간 소요<span>(18km 거리)</span>
+								</span>
+							</figcaption>
+						</figure>
+					</li>
+				</ul>
+			</div>
+			<!--//.tour-sec-->
+
+			<div class="sec qna-sec">
+				<h3 class="h3-tit">단체예약 Q&amp;A</h3>
+				<p class="p0">연호리조트 단체예약과 관련한 궁금증을 풀어드립니다.</p>
+				<ul class="qna-list" id="qna-list">
+					<li>
+						<div class="f-q" style="cursor:pointer">
+							<span class="q-con">Q1.</span>
+							<p>인원이 1,000명인데 이용 가능한가요?</p>
+							<span class="ic-bArrow arr"></span>
+						</div>
+						<div class="f-a">
+							<p>
+								연호리조트는 119 객실로, 1,000명 까지 이용 가능합니다.
+							</p>
+						</div>
+					</li>
+					<li>
+						<div class="f-q" style="cursor:pointer">
+							<span class="q-con">Q2.</span>
+							<p>기준인원 초과시 10,000원씩 내어야 하나요?</p>
+							<span class="ic-bArrow arr"></span>
+						</div>
+						<div class="f-a">
+							<p>
+								단체이용건의 경우, 예상되는 총 인원수를 기준으로 사용할 객실 수를 정하고, 인원추가비가 포함된 이용요금이 책정되므로 별도의 추가요금은 없습니다. 다만, 사전 협의된 인원이 초과된 경우에는, 추가 인원에 대해서 1인당 10,000원(1인, 1박기준)의 비용이 발생합니다.
+						</div>
+					</li>
+					<li>
+						<div class="f-q" style="cursor:pointer">
+							<span class="q-con">Q3.</span>
+							<p>단체로 가는데 할인되나요?</p>
+							<span class="ic-bArrow arr"></span>
+						</div>
+						<div class="f-a">
+							<p>
+								단체이용 고객님들께는, 더 즐거운 행사가 되도록 더 많은 할인을 제공하고 있습니다. (이용일, 이용인원에 따라 할인율은 변경될 수 있습니다.)
+							</p>
+						</div>
+					</li>
+					<li>
+						<div class="f-q" style="cursor:pointer">
+							<span class="q-con">Q4.</span>
+							<p>견적서는 언제 받을 수 있나요?</p>
+							<span class="ic-bArrow arr"></span>
+						</div>
+						<div class="f-a">
+							<p>
+								단체문의 상담은 1년 365일, 24시간 언제나 가능합니다.<br>
+								다만, 견적서는 문서화 작업이 필요하므로, 접수(또는 전화문의)일 기준으로, 다음날 17시 까지는 수신가능합니다. (메일 또는 팩스) 토요일 또는 공휴일전날 접숙건은 다음 영업일 17시까지는 견적서를 받으실 수 있습니다.
+							</p>
+						</div>
+					</li>
+					<li>
+						<div class="f-q" style="cursor:pointer">
+							<span class="q-con">Q5.</span>
+							<p>단체 이용시에도 체크인,체크아웃이 시간이 정해져 있나요?</p>
+							<span class="ic-bArrow arr"></span>
+						</div>
+						<div class="f-a">
+							<p>
+								단체 이용에 불편함이 없도록, 행사일정에 따른 입퇴실 시간 변경이 가능합니다.(사전협의 필요)
+							</p>
+						</div>
+					</li>
+					<li class="last">
+						<div class="f-q" style="cursor:pointer">
+							<span class="q-con">Q6.</span>
+							<p>강당, 세미나 시설이나 식당 시설도 있나요?</p>
+							<span class="ic-bArrow arr"></span>
+						</div>
+						<div class="f-a">
+							<p>
+								네. 있습니다. 강당, 세미나 시설과 함께 로비에 카페를 준비하여 편안하게 즐기실 수 있습니다.(사전이용 협의) 아울러, 그 외에도 다양한 부대시설을 다수의 인원이 쾌적하게 이용하실 수 있습니다.
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!--//.qna-sec-->
+
+			<div class="sec form-sec" id="etc-sec">
+				<form id="iform" action="state.php" method="post">
+					<input type="hidden" name="pid" value="">
+					<input type="hidden" name="mode" value="group_insert">
+					<div class="d-cm">
+						<p class="p-0">연호리조트가 행복과 즐거움을 책임집니다.</p>
+						<p class="p-1">단체여행 20년 경력의 특급플래너가 최적의 플랜을 제시해 드립니다.</p>
+						<p class="p-1">모든 것이 완벽한 연호리조트에서 아름다운 추억을 만들어보세요!</p>
+						<p class="p-2 cred-3">연호리조트는 119개 객실의 중대형 리조트이며<br> 1,000명까지 동시 이용이 가능합니다.</p>
+
+						<div class="contact-pop type-2" id="contact-pop" style="z-index: 0;">
+							<div class="d-top i-chk-bef">
+								<span class="s-1">은 </span>필수 입력 사항입니다.
+							</div>
+							<ul class="ul-tb nece">
+								<li class="li-tr">
+									<span class="s-lbl i-chk-aft">예약자</span>
+									<input type="text" class="wd-1" name="name" maxlength="40">
+									<hr class="show-xs">
+									<span class="s-lbl i-chk-aft ml-1">연락처</span>
+									<input type="text" class="wd-2" name="tel1" onkeyup="util.checktype('number','tel1'); util.checknum('tel1', 'tel2','2');" maxlength="3">
+									<span class="mg-"></span>
+									<input type="text" class="wd-2" name="tel2" onkeyup="util.checktype('number','tel2'); util.checknum('tel2', 'tel3','3');" maxlength="4">
+									<span class="mg-"></span>
+									<input type="text" class="wd-2" name="tel3" onkeyup="util.checktype('number','tel3'); util.checknum('tel3', 'email','3');" maxlength="4">
+									<div class="show-xs"></div>
+								</li>
+								<li class="li-tr">
+									<span class="s-lbl i-chk-aft">이메일</span>
+									<input type="text" class="wd-3" name="email">
+								</li>
+							</ul>
+							<ul class="ul-tb">
+								<li class="li-tr">
+									<span class="s-lbl">단체명</span>
+									<input type="text" class="wd-1" name="d_name">
+									<hr class="show-xs">
+									<span class="s-lbl ml-1">행사분류</span>
+									<select name="h_gubun" id="h_gubun" class="wd-1 wd-1-2">
+											<option value="수련회">수련회</option>
+											<option value="워크샵/오티">워크샵/오티</option>
+											<option value="세미나/단체행사">세미나/단체행사</option>
+											<option value="학술모임">학술모임</option>
+											<option value="각종잔치">각종잔치</option>
+											<option value="기타">기타</option>
+										</select>
+								</li>
+								<li class="li-tr">
+									<span class="s-lbl">이용일</span>
+									<input type="text" class="wd-4 sdate hasDatepicker" name="date" placeholder="체크인" readonly="" id="dp1542864543684">
+									<select name="day" id="day" class="wd-1 wd-1-2">
+											<option value="당일">당일</option>
+											<option value="1박2일" selected="">1박 2일</option>
+											<option value="2박3일">2박 3일</option>
+											<option value="3박4일">3박 4일</option>
+											<option value="4박5일">4박 5일</option>
+											<option value="5박이상">5박 이상</option>
+										</select>
+								</li>
+								<li class="li-tr">
+									<span class="s-lbl">인원</span>
+									<span class="s-txt">남자</span>
+									<input type="text" class="wd-5" name="person_man" onkeyup="util.checktype('number','person_man'); n_sum();"><span>명</span>
+									<span class="s-txt">여자</span>
+									<input type="text" class="wd-5" name="person_her" onkeyup="util.checktype('number','person_her'); n_sum();"><span>명</span>
+									<span class="mg-l"></span>
+									<span class="s-txt">총 인원</span>
+									<input type="text" class="wd-6" name="person_all" value="0" disabled=""><span>명</span>
+								</li>
+								<li class="li-tr">
+									<span class="s-lbl">예산</span>
+									<input type="text" class="wd-7" name="ex_price" onchange="getNumber(this);" onkeyup="getNumber(this);" style="text-align:right;"><span>원</span>
+									<p class="p-1 cred-2">※ 제시하신 예산범위에서 최적의 플랜을 제시해 드리겠습니다.</p>
+								</li>
+								<li class="li-tr">
+									<span class="s-lbl ver-t">기타요청</span>
+									<textarea name="content" id="" cols="30" rows="10" class="wd-8"></textarea>
+								</li>
+							</ul>
+						</div>
+
+						<p class="row-btn"><a class="a-btn" href="javascript:form_check();">단체 문의하기 <span class="ic-rArrow"></span></a></p>
+					</div>
+				</form>
+			</div>
+			<!--//.form-sec-->
+
+			<script type="text/javascript">
+				//예약자명 셋팅
+				$("input[name='name']").change(function() {
+					$(".group-popup .f-bd .fc-yellow").text($(this).val());
+				});
+			</script>
+
+			<div class="group-popup">
+				<div class="popup-wrap">
+					<div class="popup-container">
+						<div class="popup-cust">
+							<p class="f-bd"><span class="fc-yellow"></span> 고객님!</p>
+							<p>지리산 중앙 하이츠 콘도 방문을 계획해 주셔서 감사합니다.</p>
+							<p class="popup-txt pd-tb">문의사항이 정상 접수 되었습니다.</p>
+							<p class="popup-txt">
+								문의에 대한 답변은 <span class="fc-yellow">2018년 11월 23일 17시</span> 까지 <br> 남겨주신 연락처 또는 이메일로 빠르게 안내해 드리겠습니다.
+							</p>
+						</div>
+						<p class="info-txt">
+							단체문의 관련 통화는 1년 365일 언제나 가능합니다.<br> 다만, 견적전달은 영업일에만 가능합니다.
+						</p>
+						<a class="btn-close" href="javascript:void(0);" onclick="popupClose('.group-popup'); location.reload();">확 인</a>
+					</div>
+				</div>
+			</div>
+			<!--//.group-popup-->
+
+			<div class="sec etc-sec">
+				<div class="d-cm">
+					<p class="p-0">단체 행사 문의에 대한 빠른 상담이 필요하신가요?</p>
+					<p class="p-1">단체 예약 전용 번호로 연락 주시면 담당자가 빠르게 안내해 드리겠습니다. </p>
+					<p class="area-btn02">
+						<a href="javascript:;" class="a-btn">
+							<span class="pic-call"></span> <span class="num">010-4731-1079</span> <span class="txt">(주중/주말 06시~02시)</span>
+						</a>
+					</p>
+					<p class="p-2"><img class="pic-sms" src="http://design.autopay.co.kr/joon/koresco-chiak/group/ico_mail.png" alt="이메일"> help@yeonhoresort.co.kr</p>
+				</div>
+			</div>
+			<!--//.etc-sec-->
+		</div>
+		<!--//.groupSec-->
+	</div>
+	<!--//.contents-->
+
+	<div class="rWing">
+		<img src="http://img.ramadapt.co.kr/group_bn_02.png" alt="" style="cursor:pointer" onclick="javascript:faq_move();">
+	</div>
+	<!--//.rWing-->
+
+	@@include('../include/_footer.html') 
+</div>
+
+</body>
+</html>

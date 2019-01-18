@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+// common
+@import "../parts/common";
+
+
+/* 예약 form */
+.Group {
+	.sec {
+		.h3-tit {
+			color: $fg-h3 !important;
+			& + .p0 {
+				color: $fg-h4 !important;
+			}
+		}
+	}
+	.intro-sec {
+		.split .p-1 {
+			strong {
+				color: $fg-h3 !important;
+			}
+			.row {
+				color: $fg-h4 !important;
+			}
+		}
+	}
+	.room-sec {
+		.ul-list {
+			.li-item.full {
+				width: 100%;
+				figure, .d-row-1 {
+					width: 485px;
+					margin-left: auto;
+					margin-right: auto;
+				}
+
+			}
+			.li-item .d-row-1 .a-btn {
+				background: $bg-btn-main;
+			}
+		}
+	}
+	.form-sec {
+        .d-cm {
+        	.p-0 {
+        		color: $fg-h3;
+        	}
+			.p-1, .p-2 {
+				color: $fg-h4;
+                
+                &.cred-3 {
+				    color: $fg-pink-1;
+                }
+			} 
+		}
+		.ul-tb .li-tr .s-lbl.i-chk-aft {
+			&::before {
+				content: "*";
+				display: inline-block;
+				position: relative;
+				margin-right: 3px;
+				font-size: 16px;
+				color: #f00;
+				display: none;
+			}
+			&::after {
+				
+			}
+		}
+	}
+}
+

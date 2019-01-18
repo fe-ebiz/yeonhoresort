@@ -53,13 +53,19 @@
                 }
 			} 
 		}
-		.ul-tb .li-tr .s-lbl.i-chk-aft:before{
-			content: "*";
-			display: inline-block;
-			position: relative;
-			margin-right: 3px;
-			font-size: 16px;
-			color: #f00;
+		.ul-tb .li-tr .s-lbl.i-chk-aft {
+			&::before {
+				
+			}
+			&::after {
+				content: "*";
+				display: inline-block;
+				position: relative;
+				margin-right: 3px;
+				font-size: 16px;
+				color: #f00;
+				display: none;
+			}
 		}
 	}
 }

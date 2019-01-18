@@ -12,7 +12,10 @@ module.exports = function() {
 //			dest : development + '/views'
 			src  : source + '/template/**/!(_)*.html',
 			parts: source + '/template/**/_*.html',
-			dest : development + '/views'
+			dest : development + '/views',
+			src_m  : source + '/template_m/**/!(_)*.html',
+			parts_m : source + '/template_m/**/_*.html',
+			dest_m : development + '/views_m'
 		},
 
 		// Sass 경로

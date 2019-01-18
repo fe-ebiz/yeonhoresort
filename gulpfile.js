@@ -36,6 +36,7 @@ var del      = require('del'),
 // 기본
 // gulp.task('default', ['template', 'sass', 'js', 'connect', 'watch']);
 gulp.task('default', ['browserSync', 'watch']);
+gulp.task('mobile', ['browserSync_m', 'watch_m']);
 gulp.task('prepare', ['preen', 'bower:copy']);
 
 gulp.task('browserSync', ['template', 'sass', 'js'], function() {
@@ -45,11 +46,33 @@ gulp.task('browserSync', ['template', 'sass', 'js'], function() {
 		}
 	});
 });
+gulp.task('browserSync_m', ['template_m', 'sass', 'js'], function() {
+	return browerSync.init({
+		server: {
+			baseDir: './dist'
+		}
+	});
+});
+
 // 관찰
 gulp.task('watch', [], function(){
 	// HTML 템플릿 업무 관찰
 	watch([config.template.src, config.template.parts], function() {
 		gulp.start('template');
+	});
+	// Sass 업무 관찰
+	watch(config.sass.src, function() {
+		gulp.start('sass');
+	});
+	// Js 업무 관찰
+	watch(config.js.src, function() {
+		gulp.start('js');
+	});
+});
+gulp.task('watch_m', [], function(){
+	// HTML 템플릿 업무 관찰
+	watch([config.template.src_m, config.template.parts_m], function() {
+		gulp.start('template_m');
 	});
 	// Sass 업무 관찰
 	watch(config.sass.src, function() {
@@ -105,6 +128,19 @@ gulp.task('template', function(){
 		}))
 		.pipe( prettify( config.htmlPrettify) )
 		.pipe( gulp.dest( config.template.dest ) )
+		// .pipe( connect.reload() );
+		.pipe(browerSync.reload({stream: true}));
+});
+gulp.task('template_m', function(){
+	gulp.src(config.template.src_m)
+		.pipe( plumber() )
+//		.pipe( jade() )
+		.pipe( fileinclude({
+			prefix: '@@',
+			basepath: '@file'
+		}))
+		.pipe( prettify( config.htmlPrettify) )
+		.pipe( gulp.dest( config.template.dest_m ) )
 		// .pipe( connect.reload() );
 		.pipe(browerSync.reload({stream: true}));
 });

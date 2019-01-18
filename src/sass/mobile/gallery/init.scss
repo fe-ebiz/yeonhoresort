@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+// common
+@import "../parts/common";
+
+%row-dot {
+    padding-left: 0;
+    &::before {
+        content: none;
+    }
+    &.type-1 {
+	    padding-left: 12px;
+        &::before {
+            content: "-";
+            display: inline-block;
+            position: absolute;
+            left: 0;
+        }
+    }
+}
+%h3-h4 {
+    h3 {
+        strong {
+            color: $fg-h3 !important;
+        }
+    }
+    h4 {
+        color: $fg-h4 !important;
+    }
+}
+
+.cont-gallery {
+    @extend %h3-h4;
+    .row-btn {
+        .btn-booking {
+            background: $bg-btn-main !important;
+        }
+    }
+    .bx-wrapper img {
+    	width: 100%;
+    }
+}
+
+/*객실공통 안내*/
+.cont-use {
+    @extend %h3-h4;
+	.split {
+		.p-1 {
+			@extend %row-dot; 
+		}
+	}
+}

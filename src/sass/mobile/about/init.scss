@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+// common
+@import "../parts/common";
+
+%cont-h3 {
+	strong {
+		color: $fg-h3;
+	}
+}
+
+.cont-intro {
+	h3 {
+		@extend %cont-h3;
+	}
+	.intro-area {
+		.split {
+			&.split-2 {
+				.p-1 {
+					color: $fg-h4;
+				}
+			}
+		}
+		.row-btn {
+			.btn-detail {
+				background: $bg-btn-main;
+			}
+		}
+	}
+}
+
+.cont-location {
+	h3 {
+		@extend %cont-h3;
+	}	
+	.info {
+		h4 {
+			strong, .fg {
+				color: $fg-h4;
+			}
+		}
+		.p-1 {
+			.s-h {
+				color: $fg-h4;	
+			}
+		}
+	}
+}

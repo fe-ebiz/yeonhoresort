@@ -1,0 +1,6 @@
+@charset "UTF-8";
+/*공통스타일*/
+.cont-facil .full dt, .cont-facil .half dt {
+  color: #00808c; }
+  .cont-facil .full dt .s-1, .cont-facil .half dt .s-1 {
+    text-indent: 3px; }

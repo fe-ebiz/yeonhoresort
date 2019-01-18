@@ -1,0 +1,69 @@
+@charset "utf-8";
+
+// reset
+//@import "reset";
+
+@import "./parts/common";
+
+/*@import url(http://cdn.rawgit.com/hiun/NanumSquare/master/nanumsquare.css);
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url(http://static.go.co.kr/css/faq_m-v1.1.css);*/
+
+
+/*----------------------------------------------------------------------*/
+/*  해더  */
+.header {
+    .cont-header {
+        .logo {
+            width: 80px;
+            line-height: 46px;
+        }
+        .btn-evtFaq {
+            color: $fg-nav-evt;
+            border-color: $fg-nav-evt !important;
+            .icon-i {
+                background: $fg-nav-evt;
+            }
+        }
+        .gnb {
+            .menu  {
+                > li.item-0 {
+                    background: $bg-btn-main;
+                    .logo-menu {
+                        width: 80px;
+                    }
+                }
+                .rArrow:after {
+                    border-color: $bg-btn-main;
+                }
+            }
+        }
+    }
+}
+
+/*공통 서브비쥬얼*/
+.contents {
+	.cont-subVisual {
+		background: url(http://design.autopay.co.kr/joon/yeonhoresort/img/m/common/subVisual.jpg) no-repeat center / cover;
+	}
+}
+
+/* rwing배너 */
+.rWing {
+    z-index: 2;
+    position: fixed;
+    width: 70px;
+    margin-top: 13px;
+    right: 7px;
+    a {
+        position: relative;
+        display: block;
+        img {
+            
+        }
+    }
+}
+
+.footer .split .logo-f {
+    width: 80px !important;
+}

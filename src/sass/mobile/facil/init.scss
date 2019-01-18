@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+// common
+@import "../parts/common";
+
+.cont-facil {
+	.full, .half {
+		dt {
+			color: $fg-h3;
+			.s-1 {
+				text-indent: 3px;
+			}
+		}
+	}
+	
+}

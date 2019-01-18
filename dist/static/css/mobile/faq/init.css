@@ -1,0 +1,6 @@
+@charset "UTF-8";
+/*공통스타일*/
+/* 이벤트 Faq 재수정 */
+.faqWrap .ul1 > li .d1::before, .faqWrap .ul1 > li .d2::before {
+  line-height: 22px;
+  text-indent: -1px; }

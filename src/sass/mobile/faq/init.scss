@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+// common
+@import "../parts/common";
+
+
+/* 이벤트 Faq 재수정 */
+.faqWrap {
+    .ul1 > li {
+        .d1, .d2 {
+            &::before {line-height: 22px; text-indent: -1px;}
+        }
+    }
+}

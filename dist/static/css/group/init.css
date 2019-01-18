@@ -30,10 +30,11 @@
   .Group .form-sec .d-cm .p-1.cred-3, .Group .form-sec .d-cm .p-2.cred-3 {
     color: #cc4e87; }
 
-.Group .form-sec .ul-tb .li-tr .s-lbl.i-chk-aft:before {
+.Group .form-sec .ul-tb .li-tr .s-lbl.i-chk-aft::after {
   content: "*";
   display: inline-block;
   position: relative;
   margin-right: 3px;
   font-size: 16px;
-  color: #f00; }
+  color: #f00;
+  display: none; }
