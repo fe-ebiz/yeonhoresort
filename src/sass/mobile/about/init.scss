@@ -43,6 +43,21 @@
 			.s-h {
 				color: $fg-h4;	
 			}
+			.s-d {
+                position: relative;
+				padding-left: 18px;
+				
+                &:before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: 4px;
+                    height: 1px;
+                    top: 7px;
+                    left: 11px;
+                    background: $bg-black-1;
+                }
+			}
 		}
 	}
 }

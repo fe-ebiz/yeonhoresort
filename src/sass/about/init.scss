@@ -32,6 +32,13 @@
 			.s-h {
 				color: $fg-h4;	
 			}
+			.s-d {
+			    line-height: $lh-4;
+				color: $fg-black-2;
+			}
+		}
+		.p-1 + .p-1 {
+			margin-top: 20px;
 		}
 	}
 }

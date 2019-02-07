@@ -11,10 +11,3 @@
 
 .cont-location .info .p-1 .s-h {
   color: #007f63; }
-
-.cont-location .info .p-1 .s-d {
-  line-height: 1.7;
-  color: #5a5959; }
-
-.cont-location .info .p-1 + .p-1 {
-  margin-top: 20px; }
