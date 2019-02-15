@@ -9,23 +9,26 @@
   background: url(http://design.autopay.co.kr/joon/yeonhoresort/img/common/subVisual.jpg) no-repeat center; }
 
 /*해더영역*/
-.header .cont-header {
-  padding-top: 32px; }
-  .header .cont-header .logo {
-    margin-top: -15px;
-    margin-left: -30px; }
-    .header .cont-header .logo a {
-      display: block; }
-  .header .cont-header .gnb {
-    position: relative;
-    float: right; }
-    .header .cont-header .gnb .menu > li > a {
-      padding: 0 12px; }
-    .header .cont-header .gnb .menu > li:hover a, .header .cont-header .gnb .menu > li.on a {
-      color: #00727c; }
-    .header .cont-header .gnb .menu > li.li-evt > .btn-evt {
-      color: #00818d;
-      border-color: #00818d; }
+.header .cont-header .logo {
+  top: 20px; }
+  .header .cont-header .logo a {
+    display: block; }
+
+.header .cont-header .gnb {
+  position: relative; }
+  .header .cont-header .gnb .menu > li:hover a, .header .cont-header .gnb .menu > li.on a {
+    color: #00727c; }
+  .header .cont-header .gnb .menu > li.li-evt > .btn-evt {
+    color: #00818d;
+    border-color: #00818d; }
+
+.header .cont-header .bk-menu {
+  background: #07b4c3; }
+  .header .cont-header .bk-menu .btn-bk {
+    color: #eef7ff;
+    background-position: -144px 17px; }
+  .header .cont-header .bk-menu .bk-list > li a:hover {
+    background: #1395a0; }
 
 /* rwing배너 */
 .rWing {

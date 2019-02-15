@@ -23,22 +23,16 @@
 /*해더영역*/
 .header {
 	.cont-header {
-		padding-top: 32px;
 		.logo {
-			margin-top: -15px;
-			margin-left: -30px;
+            top: 20px;
             a {
                 display: block;
             }
 		}
 		.gnb {
 			position: relative;
-			float: right;
 			.menu {
 				> li {
-					> a {
-						padding: 0 12px;
-					}
 					&:hover a, &.on a {
 						color: $fg-nav-hover;
 					}
@@ -49,6 +43,25 @@
 				}
 			}
 		}
+        
+        //190215 메뉴 추가
+        .bk-menu {
+            //@include bx-menu(#618eb4, #d0e9ff, 0 17px, #48657f, #496c8a);
+            background: #07b4c3;
+            .btn-bk {
+                color: #eef7ff; 
+                background-position: -144px 17px;
+            }
+            .bk-list {
+                > li {
+                    a {
+                        &:hover {
+                            background: #1395a0;
+                        }
+                    }
+                }
+            }
+        }
 	}
 }
 
