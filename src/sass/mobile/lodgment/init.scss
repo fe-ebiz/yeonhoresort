@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+// common
+@import "../parts/common";
+
+#product_info {
+    img {
+        max-width: none;
+    }
+}

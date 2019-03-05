@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+// common
+@import "../parts/common";
+
+// Scss 한줄 주석
+// css 코드로 변경될 때, 해석되지 않습니다.
+/* Scss 여러줄 주석 CSS 코드로 변경될 때, 해석됩니다. */
+
+/*----------------
+	콘텐츠 시작
+------------------*/
+
+.contents {
+    
+    /* 장기/단기 숙박 */
+    .cont-lg {
+        .group {
+            div[class*='lg-img'] {
+
+                /* 더 자세한 객실정보 보기 링크버튼 */
+                .btn-linkOc2 {
+                    background: #1e74cb;
+                }
+
+            }
+
+            #rsv_wrapper {
+                background: #d5e5f7;
+            }
+        }
+    }
+}
+
+
+/* ie8 */
+.ie8 .contents {
+    .group {
+        #rsv_wrapper {
+            #rsv_sang {
+                #rsv_s_list_box2 {
+                    #rsv_s_list {
+                        
+                        /* 예상요금 */
+                        &.table-type2 {
+                            .rsv-stay-area {
+                                &.type-2 {
+                                    .stay-call-box {
+                                        .rsb-stay-list {
+                                            li {
+                                                .type-1 {
+                                                    line-height: 1;
+                                                    padding-top: 5px;
+                                                    padding-bottom: 5px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

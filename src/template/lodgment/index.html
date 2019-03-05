@@ -1,0 +1,197 @@
+@@include('../include/_head.html', {
+	"page": "lodgment"
+})
+
+	<!--페이지 전용 Css & Script-->
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.12/jquery.bxslider.css">
+	<link rel="stylesheet" type="text/css" href="http://static.go.co.kr/css/layout_goco.css">
+	<link rel="stylesheet" href="http://static.go.co.kr/css/totalweb.css" type="text/css">
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+	
+</head>
+<body class="Lodgment">
+
+<div class="wrapper">
+	@@include('../include/_header.html')
+
+    <!-- 190219 기존과 다른 디자인유형 -->
+	<div class="contents">
+		<div class="cont-subVisual">
+			<h2 class="group">
+				<span class="row"><span class="dot-l"></span><strong>장기/단기 숙박 안내</strong></span>
+				<span class="row s-1">YEONHO RESORT &amp; RESORT</span>
+			</h2>
+		</div>
+		<!--//.cont-subVisual-->
+      
+        <!-- 장기/단기 숙박 -->
+       <div class="cont-lg">
+           <div class="group">
+                <!-- 상단 이미지 -->
+                <div class="lg-img-top">
+                    <figure><img src="http://img.eonhoresort.co.kr/lodgment/01.jpg" alt="연호리조트 소개이미지"></figure>
+                    <figure><img src="http://img.eonhoresort.co.kr/lodgment/02_1.jpg" alt="연호리조트 소개이미지"></figure>
+                </div>
+
+                <!-- 요금 / style 제거 class 추가 -->
+                <div id="rsv_wrapper" class="rsv_wrapper">
+                    <!--- 상품 테이블 --->
+                    <div id="rsv_sang" class="rsv_top">
+                        <div id="rsv_s_list_box2">
+                            <table id="rsv_s_list">
+                                <colgroup>
+                                    <col class="nth-1">
+                                    <col class="nth-2">
+                                    <col class="nth-3">
+                                    <col class="nth-4">
+                                </colgroup>
+                                <tbody>
+                                    <tr class="t-th">
+                                        <td>상품정보</td>
+                                        <td>숙박기간</td>
+                                        <td>이용시 특혜</td>
+                                        <td>문의신청</td>
+                                    </tr>
+                                    <tr id="5010_tr" class="fir">
+                                        <td class="center ss" rowspan="5"><p>스탠다드형</p><p>디럭스형</p><p>패밀리형</p></td>
+                                        <td class="center ss pd-t">7일</td>
+                                        <td class="center ss fc-point" rowspan="5">
+                                            <span>공과금 일체 포함</span>
+                                            <span>(전기,수도요금 등)</span>
+                                        </td>
+                                        <td class="center ss fc-bd" rowspan="5">
+                                            <p>7일부터 6개월까지 이용가능!</p>
+                                        </td>
+                                    </tr>
+                                    <tr id="5011_tr">
+                                        <td class="center ss">14일</td>
+                                    </tr>
+                                    <tr id="5012_tr">
+                                        <td class="center ss">1개월</td>
+                                    </tr>
+                                    <tr id="5013_tr">
+                                        <td class="center ss pd-b">6개월</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- 예상요금 추가 -->
+                    <div id="title">
+                        <span class="big">이용 시 예상 요금을 알아볼까요?</span>
+                    </div>
+                    <!--- 상품 테이블 --->
+                    <form action="./state.php" name="rent_form">
+                    <input type="hidden" name="mode" value="rent_price_chk">
+                    <input type="hidden" name="p_no" value="272221">
+                    <div id="rsv_sang" class="rsv_top">
+                        <div id="rsv_s_list_box2">
+                            <table id="rsv_s_list" class="table-type2">
+                                <colgroup>
+                                    <col class="nth-1">
+                                    <col class="nth-2">
+                                    <col class="nth-3">
+                                </colgroup>
+                                <tbody>
+                                    <tr class="t-th">
+                                        <td>객실타입</td>
+                                        <td>예상 체류기간</td>
+                                        <td>이용 시 예상요금</td>
+                                    </tr>
+                                    <tr id="5010_tr" class="fir">
+                                        <td class="ss">
+                                            <div class="stay-chk">
+                                                <p><input type="radio" name="room_type" id="radio-1" value="" checked=""><label for="radio-1"><span>스탠다드형</span></label></p>
+                                                <p><input type="radio" name="room_type" id="radio-2" value=""><label for="radio-2"><span>디럭스형</span></label></p>
+                                                <p><input type="radio" name="room_type" id="radio-3" value="" checked=""><label for="radio-3"><span>패밀리형</span></label></p>
+                                            </div>
+                                        </td>
+                                        <td class="ss">
+                                            <div class="rsv-stay-area">
+                                                <div class="stay-call-box">
+                                                    <ul class="rsb-stay-list">
+                                                        <li>
+                                                            <span class="lbl pl-15">체크인</span>
+                                                            <input name="hseldate" id="hseldate" class="type-1 sdate hasDatepicker" value="2019-02-19" readonly="" style="cursor:pointer">
+
+                                                        </li>
+                                                        <li>
+                                                            <span class="lbl pl-15">체크아웃</span>
+                                                            <input name="nseldate" id="nseldate" class="type-1 edate hasDatepicker" value="2019-02-20" readonly="" style="cursor:pointer">
+                                                        </li>
+                                                        <li>
+                                                            <span class="lbl pl-15">이용기간</span>
+                                                            <input type="text" name="night" class="type-1" value="1박" readonly="">
+                                                        </li>
+                                                        <li>
+                                                            <span class="lbl pl-15">인원수</span>
+                                                            <select class="type-1 sel-type">
+                                                                <option value="">10명</option> <!-- 최대인원 -->
+                                                            </select>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="btn-box">
+                                                    <p class="btn_call"><a href="javascript:rent_price();">예상요금</a></p>
+                                                </div>
+                                            </div>
+                                        </td> 
+
+                                        <td class="ss">
+                                            <div class="rsv-stay-area type-2">
+                                                <div class="stay-count-box">
+                                                    <div class="single-prc clr">
+                                                        <p class="p-row cf">
+                                                            <span class="pull-left">객실요금</span><span class="pull-right c-red" id="room_price">0원</span>
+                                                        </p>
+                                                        <p class="p-row cf">
+                                                            <span class="pull-left">봉사료</span><span class="pull-right c-red" id="serve_price">0원</span>
+                                                        </p>
+                                                        <p class="p-row cf">
+                                                            <span class="pull-left">세금</span><span class="pull-right c-red" id="vat_price">0원</span>
+                                                        </p>
+                                                        <p class="mt-bar"></p>
+                                                        <p class="p-row cf">
+                                                            <span class="pull-left">총 표준요금</span><span class="pull-right c-red" id="total_price">0원</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="stay-call-box">
+                                                    <p class="fc-point">이용기간 일별 표준요금 기준이며,<br>장기이용은 전화 상담 시 이용일자에 따라<br>최대 40~50%의 할인요금을 안내해드립니다</p>
+                                                    <p class="btn_call"><a href="javascript:util.on('#call_pop_wrap')">문의신청 010-8844-0409</a></p>
+                                                </div>
+                                            </div>
+                                        </td> 
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    </form>			
+                </div>
+
+                <!-- 나머지 이미지 -->
+                <div class="lg-img">
+                    <figure><img src="http://img.eonhoresort.co.kr/lodgment/02_2.jpg" alt="연호리조트 소개이미지"></figure>
+                    <figure><img src="http://img.eonhoresort.co.kr/lodgment/03.jpg" alt="연호리조트 소개이미지"></figure>
+                    <figure>
+                        <img src="http://img.eonhoresort.co.kr/lodgment/04.jpg" alt="연호리조트 소개이미지">
+                        <!-- 자세한 객실정보보기 버튼 -->
+                        <a href="http://www.eonhoresort.co.kr/gallery/" class="btn-linkOc2">더 자세한 객실정보 보기</a>
+                    </figure>
+                    <figure><img src="http://img.eonhoresort.co.kr/lodgment/05.jpg" alt="연호리조트 소개이미지"></figure>
+                </div>
+
+           </div>
+        </div>
+       
+	</div>
+	<!--//.contents-->    
+
+	@@include('../include/_footer.html') 
+</div>
+
+</body>
+</html>
