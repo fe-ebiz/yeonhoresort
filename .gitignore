@@ -7,6 +7,8 @@ _media/
 _tmp/
 img/
 .sass-cache/
+dist/
+src/**/bourbon/
 
 #fontFile
 *.ttf

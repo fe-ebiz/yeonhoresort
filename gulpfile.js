@@ -17,18 +17,18 @@ var del      = require('del'),
 	gulpif   = require('gulp-if'),
 	rename   = require('gulp-rename'),
 	fileinclude = require('gulp-file-include'),
-	ejs      = require('gulp-ejs'),
 	sass	 = require('gulp-sass'),
 	plumber  = require('gulp-plumber'),
 	watch    = require('gulp-watch'),
 	prettify = require('gulp-html-prettify'),
-	connect  = require('gulp-connect-multi')(),
-	preen		 = require('preen'),
 	browerSync = require('browser-sync').create(), // browser-sync 호출
 
+    // ejs      = require('gulp-ejs'),
+    // connect  = require('gulp-connect-multi')(),
+    // preen		 = require('preen'),
 	// 환경설정 ./config.js
 	config   = require('./config')();
-	
+
 /**
  * Gulp 업무(Tasks) 정의
  */
@@ -40,14 +40,14 @@ gulp.task('mobile', ['browserSync_m', 'watch_m']);
 gulp.task('prepare', ['preen', 'bower:copy']);
 
 gulp.task('browserSync', ['template', 'sass', 'js'], function() {
-	return browerSync.init({
+	browerSync.init({
 		server: {
 			baseDir: './dist'
 		}
 	});
 });
 gulp.task('browserSync_m', ['template_m', 'sass', 'js'], function() {
-	return browerSync.init({
+	browerSync.init({
 		server: {
 			baseDir: './dist'
 		}
@@ -95,6 +95,50 @@ gulp.task('clean:js', function(){
 	del(config.js.dest);
 });
 
+// HTML 템플릿(template)
+gulp.task('template', function(){
+	return gulp.src(config.template.src)
+		.pipe( plumber() )
+//		.pipe( jade() )
+		.pipe( fileinclude({
+			prefix: '@@',
+			basepath: '@file'
+		}))
+		.pipe( prettify( config.htmlPrettify) )
+		.pipe( gulp.dest( config.template.dest ) )
+		// .pipe( connect.reload() );
+		.pipe(browerSync.reload({stream: true}));
+});
+gulp.task('template_m', function(){
+	return gulp.src(config.template.src_m)
+		.pipe( plumber() )
+//		.pipe( jade() )
+		.pipe( fileinclude({
+			prefix: '@@',
+			basepath: '@file'
+		}))
+		.pipe( prettify( config.htmlPrettify) )
+		.pipe( gulp.dest( config.template.dest_m ) )
+		// .pipe( connect.reload() );
+		.pipe(browerSync.reload({stream: true}));
+});
+
+gulp.task('sass', function() {
+	return gulp.src( config.sass.src )
+		.pipe( plumber() )
+		.pipe( sass().on('error', sass.logError))
+		.pipe( gulp.dest( config.sass.dest ) )
+		.pipe(browerSync.reload({stream: true}));
+});
+
+gulp.task('js', function(){
+	return gulp.src(config.js.src)
+		.pipe( plumber() )
+		.pipe( gulp.dest(config.js.dest) )
+		.pipe(browerSync.reload({stream: true}));
+});
+
+////////////////////////////////////////////
 // Bower 패키지에서 필요한 파일만 골라내기(Preen)
 gulp.task('preen', function(cb) {
 	preen.preen({}, cb);
@@ -117,56 +161,14 @@ gulp.task('bower:copy', function() {
 // 웹 서버
 // gulp.task('connect', connect.server( config.sev ) );
 
-// HTML 템플릿(template)
-gulp.task('template', function(){
-	gulp.src(config.template.src)
-		.pipe( plumber() )
-//		.pipe( jade() )
-		.pipe( fileinclude({
-			prefix: '@@',
-			basepath: '@file'
-		}))
-		.pipe( prettify( config.htmlPrettify) )
-		.pipe( gulp.dest( config.template.dest ) )
-		// .pipe( connect.reload() );
-		.pipe(browerSync.reload({stream: true}));
-});
-gulp.task('template_m', function(){
-	gulp.src(config.template.src_m)
-		.pipe( plumber() )
-//		.pipe( jade() )
-		.pipe( fileinclude({
-			prefix: '@@',
-			basepath: '@file'
-		}))
-		.pipe( prettify( config.htmlPrettify) )
-		.pipe( gulp.dest( config.template.dest_m ) )
-		// .pipe( connect.reload() );
-		.pipe(browerSync.reload({stream: true}));
-});
-
 gulp.task('compass', function() {
-	gulp.src( config.sass.src )
-		.pipe( plumber() )
-		.pipe( compass({
-			css : config.sass.dest,
-			sass: config.sass.compassSrc,
-			style: 'compact' // nested, expanded, compact, compressed
-		}) )
-		.pipe( gulp.dest( config.sass.dest ) )
-		.pipe(browerSync.reload({stream: true}));
-});
-gulp.task('sass', function() {
-	gulp.src( config.sass.src )
-		.pipe( plumber() )
-		.pipe( sass().on('error', sass.logError))
-		.pipe( gulp.dest( config.sass.dest ) )
-		.pipe(browerSync.reload({stream: true}));
-});
-
-gulp.task('js', function(){
-	gulp.src(config.js.src)
-		.pipe( plumber() )
-		.pipe( gulp.dest(config.js.dest) )
-		.pipe(browerSync.reload({stream: true}));
+    gulp.src( config.sass.src )
+    .pipe( plumber() )
+    .pipe( compass({
+        css : config.sass.dest,
+        sass: config.sass.compassSrc,
+        style: 'compact' // nested, expanded, compact, compressed
+    }) )
+    .pipe( gulp.dest( config.sass.dest ) )
+    .pipe(browerSync.reload({stream: true}));
 });
