@@ -12,12 +12,69 @@
 
 
 /*----------------------------------------------------------------------*/
-/*공통 서브비쥬얼*/
+/*공통*/
 .contents {
+    /* 서브비쥬얼 */
 	.cont-subVisual {
 		background: url(http://design.autopay.co.kr/joon/yeonhoresort/img/common/subVisual.jpg) no-repeat center;	
 
 	}
+    
+    /* tab */
+    .tab-list {
+        display: inline-block;
+        text-align: center;
+        margin: 0 auto;
+        .tab { 
+            float: left;
+            a {
+                display: block;
+                width: 215px;
+                font-size: 19px;
+                font-weight: bold;
+                line-height: 42px;
+                color: #018f9c;
+                border: 1px solid #00a4b3;
+                background: #fff;
+            }
+
+            &:first-child {
+                a {
+                    border-radius: 25px;
+                    border-top-right-radius: 0;
+                    border-bottom-right-radius: 0;
+                }
+            }
+
+            &.lst {
+                a {
+                    border-radius: 25px;
+                    border-top-left-radius: 0;
+                    border-bottom-left-radius: 0;
+                }
+            }
+
+            &.on {
+                a {
+                    color: #fff;
+                    background: #00a4b3;
+                }
+            }
+        }
+    }
+    
+    /* tab cont */
+    .tab-cont-list {
+        .common {
+            display: none;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: left;
+            &.on {
+                display: block;
+            }
+        }
+    }
 }
 
 /*해더영역*/

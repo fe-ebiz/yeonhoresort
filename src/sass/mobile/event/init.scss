@@ -1,0 +1,356 @@
+@charset "utf-8";
+
+// common
+@import "../parts/common";
+
+.cont-event { 
+    padding: 20px 0 30px;
+    text-align: center;
+    
+    .tab-cont-list {
+        .common {
+            .facil-1 {
+                position: relative;
+                padding-top: 10px;
+                
+                .fc-list {
+                    .ftfm-mg {
+                        margin: 0px auto 10px; 
+                        font-size: 15px; 
+                        letter-spacing: 1.2;
+                        text-align: center;
+                        font-weight: 600;
+                        letter-spacing: -1px;
+                        color: #595959; 
+                    }
+                    /* 슬라이드 */
+                    .bxBox {
+                        position: relative;
+                        iframe {
+                            width: 100%; 
+                            height: 185px;
+                            margin-bottom: -23px;
+                        }
+                        .bxS {
+                            li {
+                                position: relative;
+                                width: 100% !important; 
+                                height: 185px;
+                                margin: 0 auto;
+                                .fc-li-box {
+                                    box-sizing: border-box; 
+                                    display: table;
+                                    width: 100%;
+                                    height: 100%;
+                                    padding: 0 45px;
+                                    background: rgba(0, 0, 0, 0.65);
+                                    .fc-txt-box {
+                                        display: table-cell;
+                                        width: 100%;
+                                        text-align: center;
+                                        vertical-align: middle;
+                                        p {
+                                            letter-spacing: -1px;
+                                            word-break: keep-all;
+                                            color: #fff;
+                                            &.fc-li-tit {
+                                                margin-bottom: 4px;
+                                                font-size: 14px;
+                                                line-height: 18px;
+                                            }
+                                            &.fc-li-txt {
+                                                font-size: 12px;
+                                                line-height: 16px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        .bx-controls {
+                            display: block !important;
+                            .bx-controls-direction {
+                                position: absolute;
+                                top: 50%;
+                                left: 0;
+                                width: 100%;
+                                a {
+                                    z-index: 9;
+                                    display: block;
+                                    width: 22px;
+                                    height: auto;
+                                    margin-top: -10px;
+                                }
+                                .bx-prev, .bx-next {
+                                    background: none;
+                                }
+                                .bx-prev {
+                                    left: 5px;
+                                }
+                                .bx-next {
+                                    right: 5px;
+                                }
+                            }
+                            .bx-controls-auto {
+                                display: none;
+                            }
+                            .bx-pager {
+                                position: absolute;
+                                display: block;
+                                width: 100%; 
+                                bottom: -21px;
+                                text-align: center;
+                                a {
+                                    width: 8px; 
+                                    height: 8px; 
+                                    margin: 0 2.5px;
+                                    border: 1px solid #8d8d8b;
+                                    border-radius: 50%; 
+                                    background: #fff;
+                                    &:hover, &.active {
+                                        background: #44a8ff; 
+                                        border-color: #44a8ff;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                 
+                /* 표 */
+                .evt01-tb {
+                    * {
+                        box-sizing: border-box;
+                    }
+                    position: relative;
+                    box-sizing: border-box;
+                    width: 100%;
+                    margin: 32px auto 0;
+                    padding: 0 5px;
+                    text-align: left;
+                    letter-spacing: -1px;
+                    line-height: 1.2;
+                    > li {
+                        position: relative;
+                        width: 100%; 
+                        margin-top: -1px;
+                        font-size: 0;
+                        border: 1px solid #bfbfbf;
+                        &:first-child {
+                            margin-top: 0;
+                        }
+                        &.l-th {
+                            padding: 13px 0 12px;
+                            font-size: 13px;
+                            font-weight: 700;
+                            text-align: center; 
+                            color: #414141;
+                            background: #eaeaea;
+                        }
+                        &.l-td {
+                            line-height: 2.4;
+                            color: #5d5d5d;
+                            span {
+                                display: inline-block;
+                                padding: 8px 0 6px;
+                                font-size: 12px;
+                                vertical-align: top;
+                                &.s-lbl {
+                                    width: 20%;
+                                    text-align: center;
+                                    border-right: 1px solid #bfbfbf;
+                                    background: #eaeaea;
+                                }
+                                &.s-txt {
+                                    width: 80%;
+                                    padding-left: 8px;
+                                }
+                            }
+                            &.type02 {
+                                .s-txt {
+                                    line-height: 1.2;
+                                }
+                            }
+                           
+                        }
+                    }
+                }
+                
+                & + .facil-1 {
+                    padding-top: 23px;
+                    //border-top: 1px solid #ccc;
+                }
+                
+                
+                /* 
+                 * 속초 
+                 */
+                /* 음악불꽃크루즈 */
+                &.musicFire {
+                    .bxBox {
+                        li {
+                            background: url(http://img.ocean2you.co.kr/renew/event/event_musicFire_m.jpg) no-repeat;
+                            background-size: cover;
+                        }
+                    }
+                }
+                /* 스탬프투어 */
+                &.stamp {
+                    .bxBox {
+                        li {
+                            background: url(http://img.ocean2you.co.kr/renew/event/event_stamp_m.jpg) no-repeat;
+                            background-size: cover;
+                        }
+                    }
+                }
+                /* 속초국화전 */
+                &.gughwa {
+                    .bxBox {
+                        li {
+                            background: url(http://img.ocean2you.co.kr/renew/event/event_gughwa_m.jpg) no-repeat;
+                            background-size: cover;
+                        }
+                    }
+                }
+                /* 설악문화제 */
+                &.seolag {
+                    .bxBox {
+                        li {
+                            background: url(http://img.ocean2you.co.kr/renew/event/event_seolag_m.jpg) no-repeat;
+                            background-size: cover;
+                        }
+                    }
+                }
+                /* 단풍축제 */
+                &.seolagMaple {
+                    .bxBox {
+                        li {
+                            background: url(http://img.ocean2you.co.kr/renew/event/event_seolagMaple_m.jpg) no-repeat;
+                            background-size: cover;
+                        }
+                    }
+                }
+                /* 바다별빛 대포야 사랑해 */
+                &.sscLove {
+                    .bxBox {
+                        li {
+                            background: url(http://img.ocean2you.co.kr/renew/event/event_sscLove_m.jpg) no-repeat;
+                            background-size: cover;
+                        }
+                    }
+                }
+                
+                
+                /* 
+                 * 고성 
+                 */
+                /* 힐클라임대회 */
+                &.hill {
+                    .bxBox {
+                        li {
+                            background: url(http://img.ocean2you.co.kr/renew/event/event_thebike_m.jpg) no-repeat;
+                            background-size: cover;
+                        }
+                    }
+                }
+                /* 라벤더축제 */
+                &.lavender {
+                    .bxBox {
+                        .li-1 {
+                            background: url(http://img.ocean2you.co.kr/renew/event/event_lavender01_m.jpg) no-repeat;
+                            background-size: cover;
+                        }
+                        .li-2 {
+                            background: url(http://img.ocean2you.co.kr/renew/event/event_lavender02_m.jpg) no-repeat;
+                            background-size: cover;
+                        }
+                    }
+                }
+                /* 그란폰도 */
+                &.granfondo {
+                    .bxBox {
+                        li {
+                            background: url(http://img.ocean2you.co.kr/renew/event/event_granfondo_m.jpg) no-repeat;
+                            background-size: cover;
+                        }
+                    }
+                }
+                /* 명태축제 */
+                &.pollock {
+                    .bxBox {
+                        li {
+                            background: url(http://img.ocean2you.co.kr/renew/event/event_pollock_m.jpg) no-repeat;
+                            background-size: cover;
+                        }
+                    }
+                }
+                /* 플라잉디스크 */
+                &.flying {
+                    .bxBox {
+                        li {
+                            background: url(http://img.ocean2you.co.kr/renew/event/event_fiying_m.jpg) no-repeat;
+                            background-size: cover;
+                        }
+                    }
+                }
+                /* 삼포해수욕장 축제 */
+                &.sohwaghaeng {
+                    .bxBox {
+                        li {
+                            background: url(http://img.ocean2you.co.kr/renew/event/event_sohwaghaeng_m.jpg) no-repeat;
+                            background-size: cover;
+                            .fc-li-box {
+                                .fc-txt-box {
+                                    .fc-li-txt {
+                                        br {
+                                            display: none;
+                                            &:last-of-type {
+                                                display: block;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-device-width: 320px) {
+    .cont-event { 
+        .tab-cont-list {
+            .common {
+                .facil-1 {
+                    .fc-list {
+                        /* 슬라이드 */
+                        .bxBox {
+                            .bxS {
+                                li {
+                                    .fc-li-box {
+                                        padding: 0 35px;
+                                        .fc-txt-box {
+                                            p {
+                                                &.fc-li-tit {
+                                                    font-size: 14px;
+                                                }
+                                                &.fc-li-txt {
+                                                    font-size: 11px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                        }
+                    } 
+                }
+            }
+        }
+    }
+    
+}
