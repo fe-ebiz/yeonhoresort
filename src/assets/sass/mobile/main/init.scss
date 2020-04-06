@@ -1,0 +1,88 @@
+@charset "utf-8";
+
+// common
+@import "../parts/common";
+
+// Scss 한줄 주석
+// css 코드로 변경될 때, 해석되지 않습니다.
+/* Scss 여러줄 주석 CSS 코드로 변경될 때, 해석됩니다. */
+
+/*----------------
+	콘텐츠 시작
+------------------*/
+%btn-type {
+    background: $bg-btn-main;
+}
+
+/*메인 비주얼*/
+.cont-visual {
+    .visual {
+        .slide {
+            &.slide-1 {
+                background: url(http://img.eonhoresort.co.kr/m/main/visual_1.jpg) no-repeat center / cover;
+            }
+
+            &.slide-2 {
+                background: url(http://img.eonhoresort.co.kr/m/main/visual_2.jpg) no-repeat center / cover;
+            }
+
+            figure figcaption .btn-non {
+                background: $bg-btn-main !important;
+            }
+        }
+    }
+}
+
+/*객실 / 부대시설 안내*/
+.cont-guide {
+    padding: 10px 0;
+
+    h3 strong {
+        color: $fg-h3;
+    }
+
+    .split {
+
+        .full,
+        .half {
+            margin-bottom: 10px;
+
+            dt {
+                color: $fg-dt-main;
+            }
+
+            .btn-detail {
+                @extend %btn-type;
+            }
+        }
+
+        .full {
+            figure {
+                position: relative;
+                overflow: hidden;
+                height: 165px;
+
+                img {
+                    height: auto;
+
+                    &.facil-1 {
+                        position: absolute;
+                        bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 420px) {
+    .cont-guide {
+        .split {
+            .full {
+                figure {
+                    height: 246px;
+                }
+            }
+        }
+    }
+}

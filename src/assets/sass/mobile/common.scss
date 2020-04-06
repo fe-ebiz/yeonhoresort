@@ -18,21 +18,26 @@
             width: 80px;
             line-height: 46px;
         }
+
         .btn-evtFaq {
             color: $fg-nav-evt;
             border-color: $fg-nav-evt !important;
+
             .icon-i {
                 background: $fg-nav-evt;
             }
         }
+
         .gnb {
-            .menu  {
-                > li.item-0 {
+            .menu {
+                >li.item-0 {
                     background: $bg-btn-main;
+
                     .logo-menu {
                         width: 80px;
                     }
                 }
+
                 .rArrow:after {
                     border-color: $bg-btn-main;
                 }
@@ -43,20 +48,23 @@
 
 /*공통*/
 .contents {
+
     /*서브비쥬얼 */
-	.cont-subVisual {
-		background: url(http://design.autopay.co.kr/joon/yeonhoresort/img/m/common/subVisual.jpg) no-repeat center / cover;
-	}
-    
+    .cont-subVisual {
+        background: url(http://img.eonhoresort.co.kr/m/common/subVisual.jpg) no-repeat center / cover;
+    }
+
     /* tab */
     .tab-list {
         display: inline-block;
         text-align: center;
         margin: 0 auto;
         width: 72%;
-        .tab { 
+
+        .tab {
             float: left;
             width: 50%;
+
             a {
                 display: block;
                 //width: 135px;
@@ -94,7 +102,7 @@
             }
         }
     }
-    
+
     /* tab cont */
     .tab-cont-list {
         .common {
@@ -102,6 +110,7 @@
             max-width: 1000px;
             margin: 0 auto;
             text-align: left;
+
             &.on {
                 display: block;
             }
@@ -116,12 +125,12 @@
     width: 70px;
     margin-top: 13px;
     right: 7px;
+
     a {
         position: relative;
         display: block;
-        img {
-            
-        }
+
+        img {}
     }
 }
 
@@ -130,13 +139,13 @@
 }
 
 @media (max-device-width: 320px) {
-    
+
     /*공통*/
     .contents {
 
         /* tab */
         .tab-list {
-            .tab { 
+            .tab {
                 a {
                     font-size: 12px;
                 }
@@ -146,4 +155,3 @@
     }
 
 }
-

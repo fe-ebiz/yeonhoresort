@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+// common
+@import "../parts/common";
+
+// Scss 한줄 주석
+// css 코드로 변경될 때, 해석되지 않습니다.
+/* Scss 여러줄 주석 CSS 코드로 변경될 때, 해석됩니다. */
+
+/*----------------
+	콘텐츠 시작
+------------------*/
+/*메인 비주얼*/
+.cont-visual {
+    .visual {
+        .slide {
+            &.slide-1 {
+                background: url(http://img.eonhoresort.co.kr/main/visual_1.jpg) no-repeat center;
+            }
+
+            &.slide-2 {
+                background: url(http://img.eonhoresort.co.kr/main/visual_2.jpg) no-repeat center;
+            }
+
+            figure figcaption .btn-non {
+                background: $bg-btn-main;
+            }
+        }
+    }
+}
+
+
+.cont-guide {
+    padding: 30px 0 5px;
+
+    h3 strong {
+        color: $fg-h3;
+    }
+
+    .split {
+
+        .half,
+        .full {
+            margin-bottom: 24px;
+        }
+
+        .half {
+            .btn-detail {
+                background: $bg-btn-main;
+            }
+        }
+
+        &.right figure {
+            img {
+                &.facil-1 {
+                    left: -15px;
+                }
+
+                &.facil-2 {
+                    left: -90px;
+                }
+            }
+        }
+    }
+}

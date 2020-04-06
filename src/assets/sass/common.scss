@@ -14,19 +14,22 @@
 /*----------------------------------------------------------------------*/
 /*공통*/
 .contents {
-    /* 서브비쥬얼 */
-	.cont-subVisual {
-		background: url(http://design.autopay.co.kr/joon/yeonhoresort/img/common/subVisual.jpg) no-repeat center;	
 
-	}
-    
+    /* 서브비쥬얼 */
+    .cont-subVisual {
+        background: url(http://img.eonhoresort.co.kr/common/subVisual.jpg) no-repeat center;
+
+    }
+
     /* tab */
     .tab-list {
         display: inline-block;
         text-align: center;
         margin: 0 auto;
-        .tab { 
+
+        .tab {
             float: left;
+
             a {
                 display: block;
                 width: 215px;
@@ -62,7 +65,7 @@
             }
         }
     }
-    
+
     /* tab cont */
     .tab-cont-list {
         .common {
@@ -70,6 +73,7 @@
             max-width: 1000px;
             margin: 0 auto;
             text-align: left;
+
             &.on {
                 display: block;
             }
@@ -79,38 +83,46 @@
 
 /*해더영역*/
 .header {
-	.cont-header {
-		.logo {
+    .cont-header {
+        .logo {
             top: 20px;
+
             a {
                 display: block;
             }
-		}
-		.gnb {
-			position: relative;
-			.menu {
-				> li {
-					&:hover a, &.on a {
-						color: $fg-nav-hover;
-					}
-					&.li-evt > .btn-evt {
-						color: $fg-nav-evt;
-						border-color: $fg-nav-evt;
-					}
-				}
-			}
-		}
-        
+        }
+
+        .gnb {
+            position: relative;
+
+            .menu {
+                >li {
+
+                    &:hover a,
+                    &.on a {
+                        color: $fg-nav-hover;
+                    }
+
+                    &.li-evt>.btn-evt {
+                        color: $fg-nav-evt;
+                        border-color: $fg-nav-evt;
+                    }
+                }
+            }
+        }
+
         //190215 메뉴 추가
         .bk-menu {
             //@include bx-menu(#618eb4, #d0e9ff, 0 17px, #48657f, #496c8a);
             background: #07b4c3;
+
             .btn-bk {
-                color: #eef7ff; 
+                color: #eef7ff;
                 background-position: -144px 17px;
             }
+
             .bk-list {
-                > li {
+                >li {
                     a {
                         &:hover {
                             background: #1395a0;
@@ -119,7 +131,7 @@
                 }
             }
         }
-	}
+    }
 }
 
 /* rwing배너 */
@@ -128,11 +140,11 @@
     position: fixed;
     margin-top: 70px;
     right: 70px;
+
     a {
         position: relative;
         display: block;
-        img {
-            
-        }
+
+        img {}
     }
 }
